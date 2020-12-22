@@ -29,6 +29,12 @@ public class Person extends TextObject implements Stop, Worry, UseLift, UseMegap
     public void ViewPorthole(TextObject object){
         System.out.printf("%s see %s \n ", name, object.getName());
     }
+    public void rest(){
+        IsTired = false;
+    }
+    public boolean isTired(){
+        return IsTired;
+    }
     private TextObject place;
 
     public Person(String name, TextObject place) {

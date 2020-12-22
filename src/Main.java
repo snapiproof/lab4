@@ -36,6 +36,8 @@ public class Main {
 		} catch(IsTiredException e) {
 			System.out.println(e.getMessage());
 		}
+		Neznayka.rest();
+		if (Neznayka.isTired() != true) {
 		FooksiaSeledochka.outBedSomebody(bed1, Neznayka);
 		FooksiaSeledochka.carry(Neznayka, porthole);
 		while (Neznayka.isTired() != true) {
@@ -52,7 +54,7 @@ public class Main {
 		Fooksia.see(Neznayka);
 		FooksiaSeledochka.carry(Neznayka, bed1);
 		FooksiaSeledochka.toBedSomebody(bed1, Neznayka);
-
+		}
 		Clothes pants = new Clothes("pants", Color.CANARY);
 		Clothes shirt = new Clothes("shirt", Color.ORANGE);
 		Clothes stockings = new Clothes("stockings");

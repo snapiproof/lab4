@@ -38,16 +38,16 @@ public class Main {
 		}
 		FooksiaSeledochka.outBedSomebody(bed1, Neznayka);
 		FooksiaSeledochka.carry(Neznayka, porthole);
-		Item Earth = new Item("Earth");
-		Neznayka.ViewPorthole(Earth, "Now it was visible not as from the moon, but in the form of a huge sphere with light spots of continents and dark seas and oceans");
-		Item GlowingHalo = new Item("Glowing Halo");
-		Neznayka.ViewPorthole(GlowingHalo, "which enveloped the whole Earth like a warm soft duvet");
-		rocket.GetCloser(Earth);
-		Neznayka.ViewPorthole(Earth, "it was no longer possible to fully comprehend");
-
-		System.out.println("\n");
-		Neznayka.breathe();
-		Neznayka.tired();
+		while (Neznayka.isTired() != true) {
+			Item Earth = new Item("Earth");
+			Neznayka.ViewPorthole(Earth, "Now it was visible not as from the moon, but in the form of a huge sphere with light spots of continents and dark seas and oceans");
+			Item GlowingHalo = new Item("Glowing Halo");
+			Neznayka.ViewPorthole(GlowingHalo, "which enveloped the whole Earth like a warm soft duvet");
+			rocket.GetCloser(Earth);
+			Neznayka.ViewPorthole(Earth, "it was no longer possible to fully comprehend");
+			Neznayka.breathe();
+			Neznayka.tired();
+		}
 		Seledochka.see(Neznayka);
 		Fooksia.see(Neznayka);
 		FooksiaSeledochka.carry(Neznayka, bed1);
